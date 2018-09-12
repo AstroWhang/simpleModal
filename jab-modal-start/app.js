@@ -11,7 +11,19 @@ function main() {
   closeModalTrigger.addEventListener("click", function() {
     modalEl.classList.remove("open");
   })
+
+// add event listener to the window itself
+  window.addEventListener("click", function(event) {
+    if (event.target === modalEl) {
+      modalEl.classList.remove("open");
+    }
+  })
+
 };
+
+
+
+
 
 main();
 
